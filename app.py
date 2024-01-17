@@ -59,10 +59,13 @@ def handle_message(event):
         GPT_answer = GPT_response(msg)
         print(GPT_answer)
         line_bot_api.reply_message(event.reply_token, TextSendMessage(GPT_answer))
-    except:
-        print(traceback.format_exc())
-        line_bot_api.reply_message(event.reply_token, TextSendMessage('你所使用的OPENAI API key額度可能已經超過，請於後台Log內確認錯誤訊息'))
-        
+    except Exception as e:  # 捕捉具體的異常
+        error_message = str(e)  # 將異常轉換為字符串
+        print('發生錯誤:', error_message)  # 在後台日誌中打印錯誤
+        print(traceback.format_exc())  # 打印錯誤堆疊追踪
+        # 向用戶發送錯誤信息
+        line_bot_api.reply_message(event.reply_token, TextSendMessage('發生錯誤: ' + error_message))
+
 
 @handler.add(PostbackEvent)
 def handle_message(event):
