@@ -96,6 +96,7 @@ import datetime
 import time
 import traceback
 import mysql.connector
+import mysql
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
