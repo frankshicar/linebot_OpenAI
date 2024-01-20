@@ -90,13 +90,13 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
+import mysql.connector
 from linebot.models import *
 import tempfile, os
 import datetime
 import time
 import traceback
-import mysql.connector
-import mysql
+
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
