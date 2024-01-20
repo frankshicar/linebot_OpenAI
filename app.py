@@ -109,7 +109,7 @@ handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 
 # 設定 MySQL 連接資訊
 db_config = {
-    'host': 'localhost',
+    'host': '118.167.3.50',
     'port' : 3306,
     'user': 'root',
     'password': 'frank0403',
