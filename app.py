@@ -111,7 +111,7 @@ handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 db_config = {
     'host': 'localhost',
     'port' : 3306,
-    'user': 'linebot',
+    'user': 'linebot001',
     'password': '123456789',
     'database': 'new_schema',
     'charset': 'utf8'
