@@ -117,6 +117,7 @@ db_config = {
     'charset': 'utf8'
 }
 
+
 # 測試資料庫連接函數
 def test_database_connection():
     try:
