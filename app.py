@@ -106,7 +106,7 @@ line_bot_api = LineBotApi(os.getenv('CHANNEL_ACCESS_TOKEN'))
 
 # Channel Secret
 handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
-
+# localhost接不上
 # 設定 MySQL 連接資訊
 db_config = {
     'host': 'localhost',
@@ -116,7 +116,6 @@ db_config = {
     'database': 'new_schema',
     'charset': 'utf8'
 }
-
 
 # 測試資料庫連接函數
 def test_database_connection():
